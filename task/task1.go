@@ -32,19 +32,105 @@
 
 // максимум из трех
 
-package main
+// package main
 
-import "fmt"
+// import "fmt"
 
-func main() {
-	x, y, z := 3, 4, 4
-	if x > y && x > z && y != z {
-		fmt.Println("X", x)
-	} else if y > z && y > x && z != x {
-		fmt.Println("Y", y)
-	} else if z > x && z > y && x != y {
-		fmt.Println("Z", z)
-	} else {
-		fmt.Println("Все числа равны")
-	}
-}
+// func main() {
+// 	x, y, z := 7, 7, 2
+// 	res := x
+// 	if y > res {
+// 		res = y
+// 	}
+// 	if z > res {
+// 		res = z
+// 	}
+// 	fmt.Println(res)
+// }
+
+//Задача про слона в шахматах
+
+// package main
+
+// import "fmt"
+
+// func main() {
+// 	a, b := 3, 1
+// 	x, y := 7, 8
+// 	if (a - b) == (x - y) {
+// 		fmt.Println("YES")
+// 	} else {
+// 		fmt.Println("NO")
+// 	}
+// }
+
+// Ход короля
+
+// package main
+
+// import "fmt"
+
+// func main() {
+// 	a, b := 4, 4
+// 	x, y := 1, 3
+
+// 	if (a-x)*(b-y) <= 1 {
+// 		fmt.Println("YES")
+// 	} else {
+// 		fmt.Println("NO")
+// 	}
+// }
+
+// Шоколадка
+
+// package main
+
+// import "fmt"
+
+// func main() {
+// 	n, m, k := 3, 2, 1
+
+// 	if k < n*m && ((k%n == 0) || (k%m == 0)) {
+// 		fmt.Println("YES")
+// 	} else {
+// 		fmt.Println("NO")
+// 	}
+// }
+
+//Уравнения
+
+// package main
+
+// import "fmt"
+
+// func main() {
+// 	a, b := 6, -2
+// 	x := -b / a
+// 	if -b%a == 0 {
+// 		fmt.Println(x)
+// 	} else if -b%a != 0 {
+// 		fmt.Println("")
+// 	} else if x < 0 {
+// 		fmt.Println("NO")
+// 	}
+// }
+// Не нашел как правильно решить, не понимаю условие
+
+// Сдача
+
+// package main
+
+// import "fmt"
+
+// func main() {
+// 	a, b, c, d := 2, 17, 1, 18
+// 	// e, f := 0, 0
+// 	if c >= a {
+// 		e := ((c*100 + d) - (a*100 + b)) / 100
+// 		f := ((c*100 + d) - (a*100 + b)) % 100
+
+// 		fmt.Println(e, f)
+// 	} else {
+// 		fmt.Println("Недостаточно денег")
+// 	}
+// }
