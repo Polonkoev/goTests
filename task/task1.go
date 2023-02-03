@@ -221,14 +221,51 @@
 несколько способов приобретения билетов одинаковой стоимости,
 необходимо вывести ту комбинацию билетов, которая дает большее число поездок.*/
 
-// package main
+package main
 
-// import "fmt"
+import "fmt"
 
-// func main() {
-// 	n := 1
-// 	a, b, c, d, e := 1, 5, 10, 20, 60
-// 	f, g, h, i, j := 15, 70, 125, 230, 440
+func main() {
+	const (
+		cost1  = 15
+		cost5  = 70
+		cost10 = 125
+		cost20 = 230
+		cost60 = 440
+	)
+	k1, k5, k10, k20, k60 := 1, 5, 10, 20, 60
+	var n = 12
 
-// 	if n > 1 &&
-// }
+	k60 = n / 60
+	n %= 60
+	k20 = n / 20
+	n %= 20
+	k10 = n / 10
+	n %= 10
+	k5 = n / 5
+	k1 = n % 5
+
+	if k1*cost1 >= cost5 {
+		k1 = 0
+		k5 = 5
+	}
+	if k1*cost1+k5*cost5 >= cost10 {
+		k1 = 0
+		k5 = 0
+		k10 = 10
+	}
+	if k1*cost1+k5*cost5+k10*cost10 >= cost20 {
+		k1 = 0
+		k5 = 0
+		k10 = 0
+		k20 = 20
+	}
+	if k1*cost1+k5*cost5+k10*cost10+k20*cost20 >= cost60 {
+		k1 = 0
+		k5 = 0
+		k10 = 0
+		k20 = 0
+		k60 = 60
+	}
+	fmt.Println(k1, k5, k10, k20, k60)
+}
